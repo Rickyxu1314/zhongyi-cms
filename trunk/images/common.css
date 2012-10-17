@@ -1,0 +1,47 @@
+@charest "utf-8";
+
+/*
+a{blr:expression(this.onFocus=this.blur())}
+a:focus{outline:none}
+*/
+
+.tLeft{text-align:left}
+.tRight{text-align:right}
+.tCenter{text-align:center}
+.tTop{vertical-align:top}
+.tBottom{vertical-align:bottom}
+.tMiddle{vertical-align:middle}
+
+.fLeft{float:left}
+.fRight{float:right}
+.fNone{float:none}
+.clear{clear:both;font-size:0;line-height:0;height:0}
+
+.normal{font-weight:normal}
+.bold{font-weight:bold}
+.indent{text-indent:2em}
+
+.super{width:800px}
+.huge{width:600px}
+.large{width:450px}
+.big{width:280px}
+.medium{width:150px}
+.small{width:65px}
+.mini{width:35px}
+
+.none{display:none}
+.inline{display:inline}
+.block{display:block}
+.border{border-width:1px;border-style:solid}
+.hand{cursor:pointer}
+
+.dashed{border:1px dashed gray}
+.solid{border:1px solid gray}
+
+.red{color:red}
+.green{color:green}
+.blue{color:blue}
+.white{color:white}
+.gray{color:gray}
+.orange{color:orange}
+.yellow{color:yellow}

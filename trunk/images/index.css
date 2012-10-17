@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import url("common.css");
+
+body, p, form, ul, dl, dd, dt, table, th, h1, h2, h3, h4, h5, h6, h7{margin:0;padding:0}
+img{border:none}
+body, table, th{font-size:12px;font-family:Tahoma,Verdana,Helvetica,Arial,sans-serif}
+input, select, textarea{font-size:12px;font-family:Tahoma,Verdana,Helvetica,Arial,sans-serif}
+table{border-collapse:collapse;border-spacing:0;margin-left:auto;margin-right:auto}
+input, select{vertical-align:middle}
+optgroup{font-style:normal}
+label{cursor:pointer}
+ul{list-style:none}
+
+a{text-decoration:none;color:#036}
+a:hover{text-decoration:underline;color:#F60}
+a{blr:expression(this.onFocus=this.blur())}
+a:focus{outline:none}
+
+.m_b_8px{margin-bottom:8px}
+
+.top{background:#F3F3F3;height:28px;border-bottom:1px solid #DDD;line-height:28px;color:#777;font-family:Verdana, Geneva, sans-serif}
+.top a{color:#777}
+.top a:hover{color:#F60}
+.main{width:960px;margin:0 auto;overflow:hidden;}
+
+.footer{background:#F3F3F3;border-top:1px solid #DDD;text-align:center;color:#333;line-height:200%;padding:10px 0}
+.footer a{color:#333;margin:0 5px}
+.footer a:hover{color:#F60}
+
+ul.main_nav li{float:left;margin-right:20px;font-size:14px}
+fieldset{padding:0;margin:0}
+fieldset{border:1px #777777 solid;padding:10px}
+fieldset legend{color:#777;*margin-bottom:10px}
+
+ul.left_nav li{line-height:150%;font-size:16px;text-indent:1em}
+ul.left_nav li a.cur{color:#FF6600}
+
+.mainContent{font-size:14px;line-height:180%;color:#000;padding-top:10px;padding-right:10px;padding-bottom:20px;padding-left:10px}
+.mainContent p{padding-bottom:10px}
+.mainContent .intro { margin:0px auto 10px; text-indent:2em; border: 1px solid #D6E3F7; padding:10px; background:#FFF; margin-bottom:20px; }
+.mainContent .intro p { padding-bottom:0px; }
+
+.page { text-align: center; padding:15px 0; }
+.page a {color: #999; border: 1px solid #999; display: inline-block; margin-right: 1px; margin-left: 1px; padding-top: 3px; padding-right: 8px; padding-bottom: 3px; padding-left: 8px; }
+.page a:hover, .page a.cur { color:#FFF; background-color:#F60; border:solid 1px #F60; }
+
+ ul.list1{list-style:inside square;margin:0 15px}
+ ul.list1 li{height:30px;line-height:30px;border-bottom:1px dotted #333}
+
+.sideleft{width:180px;float:left;vertical-align:top;background:#F6F6F6;padding-bottom:9999px;margin-bottom:-9999px;}
+.sideright{width:780px;float:left;padding-bottom:9999px;margin-bottom:-9999px;}
+
+.class_nav{line-height:200%}
+.class_nav .class_nav2{padding-left:2em;font-size:14px}
+.class_nav .class_nav3{padding-left:4em}
+.class_nav .cur{color:#FF6600}
+
+.form1{
+	margin:10px 30px;
+}
+.form1 p{
+	padding:3px 0;
+}
+.form1 input, .form1 textarea{
+	line-height:150%;
+	vertical-align:middle;
+	border:1px solid #333;
+}
+.form1 input{
+	height:18px;
+	line-height:18px;
+	padding-left:2px;
+}

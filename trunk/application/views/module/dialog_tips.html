@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>js/static/themes/base/jquery.ui.all.css" />
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/static/external/jquery.bgiframe-2.1.2.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/static/ui/jquery.ui.core.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/static/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/static/ui/jquery.ui.mouse.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/static/ui/jquery.ui.draggable.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/static/ui/jquery.ui.position.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/static/ui/jquery.ui.resizable.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/static/ui/jquery.ui.dialog.js"></script>
+<script type="text/javascript">
+        //id:为dialog-1 中的1，w：为窗口的宽度，t：为窗口的title，c：为窗口的内容;
+	function showtab_unlogin(id,w,t,h,c){
+		$("#dialog-"+id).dialog({
+			width: w,
+			height:h,
+			modal: true,
+			resizable: false,
+			title: t
+		});
+		$("#dialog-"+id).html(c);
+	}
+</script>
+
+<style type="text/css">
+
+/*通用弹出对话框样式*/
+.ui-widget-content {border:1px solid #ccc;}
+.goto_write_info{background:url(/images/tips.png) 58px 5px no-repeat; display:block; margin:10px auto 0 auto; line-height:30px;}
+</style>
+
+<div id="dialog-del" style="display:none; padding-top:30px; text-align:center">
+	
+</div>

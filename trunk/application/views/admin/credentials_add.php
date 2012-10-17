@@ -1,0 +1,63 @@
+<?php echo $this->load->view("admin/header") ?>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/editor_config.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url()?>js/editor_all.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>js/themes/default/ueditor.css" />
+<style type="text/css">
+	.nd{float:left; width:99%; border:1px solid #ccc;border-radius:4px;}
+	#main-content tbody{border-bottom:none;}
+	table td{border-top:1px solid #ccc;}
+	.nd_title{width:100%; height:40px; line-height:40px; font-size:14px; text-indent:10px; background:#ddd;}
+	.input{float:left;}
+	.pic{float:left; width:100px; height:100px; border:1px solid #ccc;}
+	.product_sel{float:left;}
+	#edui1_bottombar{display:none;}
+	#editor{width:500px;}
+	#tip{color:red; margin-left:10px; line-height:27px; float:left;}
+	.hide{display:none;}
+	#add_type{cursor:pointer;}
+	.close_type{vertical-align: middle;}
+</style>
+<div id="content">
+	<div class="nd">
+		<div class="nd_title"><strong>添加资质认证</strong></div>
+		<?php echo form_open_multipart("index.php/admin/credentials/credentials_add")?>
+		<table>
+			<tr>
+				<td width="10%">资质认证名称:</td>
+				<td width="80%"><input type="text" class="input" name="credentials_name" /></td>
+			</tr>
+			<tr>
+				<td width="10%">资质认证图片</td>
+				<td width="80%">
+                                    <input type="file" name="userfile" value="" style="float:left;" />
+                                </td>
+			</tr>
+			<tr>
+				<td>资质认证介绍:</td>
+				<td style="padding-right:5px;"><span id="editor"></span></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" name="submit" id="sub" />
+				</td>
+			</tr>
+		</table>
+         <?php echo form_close()?>
+	</div>
+</div>
+<script type="text/javascript">
+
+	var editorOption = {
+        //focus时自动清空初始化时的内容
+        autoClearinitialContent:true,
+        //关闭字数统计
+        wordCount:false,
+        //关闭elementPath
+        elementPathEnabled:false,
+        //更多其他参数，请参考editor_config.js中的配置项
+        minFrameHeight:200
+    };
+	var editor_a = new baidu.editor.ui.Editor(editorOption);
+	editor_a.render( 'editor' );
+</script>	
+<?php echo $this->load->view("admin/footer") ?>
