@@ -42,7 +42,7 @@
 			<?php }?>
 			</tbody>
 		</table>
-        <!--<div><?php echo $page?></div>-->
 	</div>
+	<div class="page"><?php echo $this->mypage_class->show(1); ?></div>
 </div>
 <?php echo $this->load->view("admin/footer") ?>

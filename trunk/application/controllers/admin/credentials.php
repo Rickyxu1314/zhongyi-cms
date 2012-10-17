@@ -5,6 +5,16 @@ class Credentials extends CI_Controller{
     }
     
     public function index(){
+    	$page_config['perpage']=5;   //每页条数
+		$page_config['part']=2;//当前页前后链接数量
+		$page_config['url']='work/managework';//url
+		$page_config['seg']=3;//参数取 index.php之后的段数，默认为3，即index.php/control/function/18 这种形式
+		$page_config['nowindex']=$this->uri->segment($page_config['seg']) ? $this->uri->segment($page_config['seg']):1;//当前页
+		$this->load->library('mypage_class');
+		$countnum=$this->admin_model->GetCredentials_num();//得到记录总数
+		$page_config['total']=$countnum['count(*)'];
+		$this->mypage_class->initialize($page_config);
+		
     	$data['arr'] = $this->admin_model->GetCredentials();
     	$this->load->view('admin/credentials_view',$data);
     }
