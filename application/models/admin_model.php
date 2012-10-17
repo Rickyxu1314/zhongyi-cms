@@ -188,6 +188,12 @@ class Admin_model extends CI_Model {
         $q = $this->db->get('cases');
         return $q->result();
     }
+    /* 获取总条数 */
+	public function GetCredentials_num(){
+		$this->db->where('type','credentials');
+        $q = $this->db->get('cases');
+        return $q->num_rows();
+    }
         
     /*  删除资质认证 */
     public function DelCredentials(){
