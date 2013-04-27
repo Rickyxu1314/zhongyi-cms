@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * filename: ext_page.class.php  wwx 2011-08-12
  * description:超强分页类，四种分页模式，默认采用类似baidu,google的分页风格。

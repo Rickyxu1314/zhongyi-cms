@@ -170,11 +170,19 @@ class Admin_model extends CI_Model {
     }
 	
 	/* 获取荣誉证书 */
-    public function GetHonor(){
+    public function GetHonor($num="", $offset=""){
+		$this->db->where('type','honor');
+		$query = $this->db->get('cases', $num, $offset); 
+		return $query->result();
+    }
+
+	/* 获取总条数 */
+	public function GetHonor_num(){
 		$this->db->where('type','honor');
         $q = $this->db->get('cases');
-        return $q->result();
+        return $q->num_rows();
     }
+
         
     /*  删除荣誉证书 */
     public function DelHonor(){
@@ -183,9 +191,9 @@ class Admin_model extends CI_Model {
     }
     
 	/* 获取资质认证*/
-    public function GetCredentials($offset,$num){
+    public function GetCredentials(){
 		$this->db->where('type','credentials');
-        $q = $this->db->get('cases',$offset,$num);
+        $q = $this->db->get('cases');
         return $q->result();
     }
     
@@ -208,9 +216,9 @@ class Admin_model extends CI_Model {
     }
     
     /* 获取总条数 */
-	public function GetCredentials_num($offset,$num){
+	public function GetCredentials_num(){
 		$this->db->where('type','credentials');
-        $q = $this->db->get('cases',$offset,$num);
+        $q = $this->db->get('cases');
         return $q->num_rows();
     }
         

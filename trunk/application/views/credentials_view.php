@@ -33,7 +33,7 @@
         	<img src="<?php echo '/uploads/credentials/'.$value->img?>" />
         <?php }?>
     </div>
-    
+    <div class="page"></div>
   </div>
   <div class="clear"></div>
   <div class="H60px"></div>
