@@ -15,6 +15,55 @@
 	margin-left: 26px;
 	_margin-left:13px;
 }
+
+.page{
+    font-size:12px;
+    height:30px;
+    text-align:right;
+    padding-right:120px;
+}
+.pg_pre,.pg_next{
+    border:1pxsolid#ccc;
+    margin:03px;
+    background-image:url("../image/icon_pg.gif");
+    background-repeat:no-repeat;
+}
+.pg_pre{
+    padding:3px8px3px20px;
+    background-position:7px3px;
+}
+a.pg_pre{
+    background-position:7px-19px;
+}
+.pg_next{
+    padding:3px20px3px8px;
+    background-position:-22px3px;
+}
+a.pg_next{
+    background-position:-22px-19px;
+}
+  
+.pg_link{
+    padding:3px8px;
+    margin:03px;
+    border:1pxsolid#ccc;
+}
+.pg_link:hover,a.pg_next:hover,a.pg_pre:hover{
+    border:1pxsolid#A9C9E2;
+    color:#137cce;
+}
+.pg_curr{
+    padding:3px8px;
+    margin:03px;
+    color:#137cce;
+    background-color:#E8F5FE;
+    border:1pxsolid#A9C9E2;
+  
+}
+.pg_select{
+    border:1pxsolid#ccc;
+    padding:2px;
+    margin:05px;
 </style>
 <div class="ad"><img src="<?php echo base_url()?>images/ad8.png" width="1000" height="144" /></div>
  <div class="content">
@@ -43,7 +92,7 @@
     </div>
     
     <!--分页-->
-    <div class="page"><a href="#">上一页</a>&nbsp;<a href="#">1</a>&nbsp;<a href="#">下一页</a></div>
+    <div class="page"><?php echo $this->mypage_class->show(2); ?></div>
   </div>
   <div class="clear"></div>
  </div>

@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://zhongyi.com/';
+$config['base_url']	= 'http://zhongyi-cms.com/';
 //$config['base_url']	= 'http://zhongyi_test.com/';
 
 /*
