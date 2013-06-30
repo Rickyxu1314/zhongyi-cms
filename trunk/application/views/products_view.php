@@ -69,7 +69,18 @@ $(function(){
 				 i++;
 			 }	 
 		 });
-	 });	 	 
+	 });
+
+	 $('#list li').each(function(){
+		var href = $(this).children().attr('href');
+		href = href.split('?');
+		href = href[1];
+		href = href.split('=');
+		var href_length = href.length;
+		href = href[href_length-1];
+		
+		//alert(href)
+	});	 	 
 });
 </script>
 <div class="ad"><img src="<?php echo base_url()?>images/ad1.png" width="1001" height="144" /></div>
