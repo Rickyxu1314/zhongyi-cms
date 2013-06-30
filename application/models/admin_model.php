@@ -41,6 +41,14 @@ class Admin_model extends CI_Model {
 		$query = $this->db->get('news');
 		return $query->result();
 	}
+	
+	/* 获取类别产品 */
+	public function GetTypeProducts($type){
+		$this->db->where('p_type',$type);
+		$query = $this->db->get('products');
+		return $query->result();
+	}
+	
 	/* 删除资讯内容 */
 	public function DeleteNews(){
 		$id = $this->uri->segment(4);
@@ -191,28 +199,11 @@ class Admin_model extends CI_Model {
     }
     
 	/* 获取资质认证*/
-    public function GetCredentials(){
+    public function GetCredentials($limit, $offset){
+		$this->db->limit($limit, $offset);
 		$this->db->where('type','credentials');
         $q = $this->db->get('cases');
         return $q->result();
-    }
-    
-	function getAccounts($arr=array('num'=>FALSE,'offset'=>FALSE))
-    {
-        //分页限制
-        $limit='';
-        if(isset($arr['num']) and isset($arr['offset']) and $arr['num']!==FALSE and $arr['offset']!==FALSE ){
-          $limit=" LIMIT {$arr['offset']},{$arr['num']}";
-        }
-        $query = $this->db->query("select * from cases where type = 'credentials'$limit");
-
-        $accounts = array();
-
-        foreach ($query->result() as $row) {
-            $accounts[] = $row;
-        }
-        return $accounts;
-    
     }
     
     /* 获取总条数 */

@@ -72,6 +72,7 @@ $(function(){
 	 path = path.split("/");
 	 var path_length = path.length;
 	 $url = path[path_length-1];
+	 
 	
     var name="";
 	var i = 0;

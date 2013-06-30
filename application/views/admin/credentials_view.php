@@ -43,6 +43,7 @@
 			</tbody>
 		</table>
 	</div>
-	<!--<div class="page"><?php echo $this->mypage_class->show(1); ?></div>-->
+	<?php echo $create_links;?>
+	<!--<div class="page"></div>-->
 </div>
 <?php echo $this->load->view("admin/footer") ?>
